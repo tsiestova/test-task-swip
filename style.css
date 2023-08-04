@@ -1,0 +1,154 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000;
+    color: rgb(255, 255, 255);
+}
+
+ul {
+    padding: 0;
+}
+
+.layout {
+    padding: 0 30px;
+    margin: auto;
+    position: relative;
+}
+
+.page-wrap {
+    padding-top: 30px;
+}
+
+.container {
+    position: relative;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #232323;
+    z-index: 1;
+}
+
+.container:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #232323;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.swiper {
+    width: 90%;
+    height: 100%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    color: rgb(255, 255, 255);
+    background: rgb(229, 9, 20);
+    padding: 12px;
+    border-radius: 5px;
+}
+
+
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+    background: rgb(229, 9, 20, .8);
+}
+
+.swiper-pagination-bullet span {
+    color: rgb(255, 255, 255);
+    width: 30px;
+    height: 30px;
+}
+
+.swiper .swiper-slide {
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+}
+
+.swiper .swiper-slide:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.swiper-slide iframe {
+    border: 1px solid #232323;
+    border-radius: 5px;
+    pointer-events: none;
+    height: 100%;
+}
+
+.swiper-slide iframe:hover {
+    cursor: pointer;
+}
+
+.swiper-pagination {
+    margin-bottom: 20px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    background: rgb(255, 255, 255);
+}
+
+.slider-wrap {
+    padding: 20px;
+    position: relative;
+    height: 300px;
+}
+
+.modal-window iframe {
+    pointer-events: all;
+}
+
+.modal-window .swiper {
+    width: 60vw;
+    /*height: 60vh;*/
+}
+
+.modal-window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #000;
+    border-radius: 0;
+}
+
+.modal-window::backdrop {
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(5px);
+}
+
+.modal-window #slider-video .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-window iframe {
+    border: none;
+    width: 100%;
+    height: 600px;
+}
+
+.modal-window .swiper-pagination {
+    bottom: -10px !important;
+}
+
+.modal-inner-content {
+    border-radius: 5px;
+}
